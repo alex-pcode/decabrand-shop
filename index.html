@@ -88,14 +88,57 @@ footer small{display:block;opacity:.6;margin-top:22px;max-width:60em}
 .acc p,.acc li{margin-top:8px;color:#3a342a;font-size:15px}.acc ul{padding-left:18px}
 .more{background:var(--cream);padding:60px 0}
 @media(max-width:860px){nav.main{display:none}.menu-btn{display:block}.hero .wrap,.story .wrap,.pdp{grid-template-columns:1fr}.mat .cols,.steps{grid-template-columns:1fr}.info{position:static}.block{padding:52px 0}.hero .ph{max-width:420px}}
+
+.cartbtn{display:inline-flex;align-items:center;gap:8px;padding:10px 18px;font-size:14px}
+.badge{display:inline-block;min-width:22px;height:22px;line-height:22px;border-radius:11px;background:var(--mustard);color:var(--ink);font-size:12px;font-weight:800;text-align:center;padding:0 6px}
+.cartbtn.bump{transform:scale(1.06)}
+.ov{position:fixed;inset:0;background:rgba(20,20,20,.45);opacity:0;pointer-events:none;transition:.2s;z-index:90}
+.ov.on{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;bottom:0;width:min(460px,100%);background:var(--paper);z-index:100;display:flex;flex-direction:column;transform:translateX(105%);transition:transform .25s;box-shadow:-10px 0 40px -18px rgba(20,20,20,.5)}
+.drawer.on{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;border-bottom:1px solid var(--line)}
+.dh h3{font-size:28px}
+.x{background:none;border:1.5px solid var(--line);border-radius:50%;width:38px;height:38px;font-size:22px;cursor:pointer;line-height:1}
+.db{flex:1;overflow:auto;padding:8px 22px 18px}
+.df{padding:16px 22px 20px;border-top:1px solid var(--line);background:var(--cream)}
+.df .tot{display:flex;justify-content:space-between;font-weight:800;font-size:18px;margin-bottom:12px}
+.df .btn{width:100%;text-align:center}
+.help{font-size:12.5px;color:var(--muted);margin-top:12px;text-align:center}.help a{text-decoration:underline;color:var(--rust);font-weight:700}
+.ln{display:grid;grid-template-columns:68px 1fr auto;gap:12px;padding:14px 0;border-bottom:1px solid var(--line);align-items:start}
+.ln img{width:68px;height:84px;object-fit:cover;border-radius:10px;background:var(--cream)}
+.ln b{display:block;font-family:"DM Serif Display",serif;font-weight:400;font-size:18px;line-height:1.15}
+.ln small{display:block;color:var(--muted);font-size:12.5px;margin-top:3px}
+.ln .pp{font-weight:800;font-size:14px;text-align:right}
+.qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:#fff;margin-top:8px}
+.qty button{background:none;border:0;width:32px;height:32px;font-size:18px;cursor:pointer;font-family:inherit}
+.qty span{min-width:22px;text-align:center;font-weight:800;font-size:14px}
+.rm{background:none;border:0;color:var(--rust);font-size:12px;text-decoration:underline;cursor:pointer;display:block;margin:6px 0 0 auto;font-family:inherit}
+.empty{padding:40px 0;text-align:center;color:var(--muted)}
+.fld{display:block;margin-top:12px;font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.fld input,.fld textarea{display:block;width:100%;margin-top:5px;padding:11px 14px;border:1.5px solid var(--line);border-radius:12px;font:inherit;font-size:15px;font-weight:400;letter-spacing:0;text-transform:none;background:#fff}
+.fld input:focus,.fld textarea:focus{outline:2px solid var(--rust);border-color:var(--rust)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pay{margin-top:16px;padding:12px 14px;border:1.5px solid var(--ink);border-radius:12px;font-weight:700;font-size:14px;background:#fff}
+.back{background:none;border:0;font:inherit;font-size:13px;font-weight:700;color:var(--rust);cursor:pointer;text-decoration:underline;margin-top:12px}
+.done{text-align:center;padding:26px 0}.done h3{font-size:34px;margin:10px 0}
+.done .ok{width:64px;height:64px;border-radius:50%;background:var(--green);color:var(--cream);font-size:34px;line-height:64px;margin:0 auto}
+.sum{text-align:left;margin-top:18px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:6px 16px;font-size:14px}
+.sum div{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}.sum div:last-child{border:0;font-weight:800}
+.sel{padding:9px 12px;border:1.5px solid var(--line);border-radius:999px;background:#fff;font:inherit;font-size:14px;font-weight:700;width:100%}
+.crow{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.card .add{width:100%;margin-top:12px;padding:11px 16px;font-size:14px;text-align:center}
+.cerr,.err{color:#a3271b;font-size:13px;font-weight:700;margin-top:6px}
+.card .imlink{display:block}
+.qrow{display:flex;gap:12px;align-items:center}
+@media(max-width:860px){.cartbtn{padding:9px 14px}}
 </style>
 </head>
 <body>
-<div class="announce">Nova kolekcija: lan za leto &middot; Sve informacije i porudžbine preko Instagram poruka</div>
+<div class="announce">Nova kolekcija: lan za leto &middot; Poruči direktno na sajtu &middot; plaćanje pouzećem</div>
 <header class="site"><div class="wrap">
 <a class="logo" href="index.html"><img src="img/logo.jpg" alt="Deca"><span>deca</span></a>
 <nav class="main"><a href="index.html#kolekcija">Kolekcija</a><a href="index.html#materijali">Materijali</a><a href="index.html#price">Priča</a><a href="index.html#utisci">Utisci</a><a href="index.html#porucivanje">Poručivanje</a></nav>
-<a class="btn btn-dark" style="padding:10px 20px;font-size:14px" href="https://ig.me/m/deca_brand">Piši nam</a>
+<button class="btn btn-dark cartbtn" id="cartbtn" type="button" aria-label="Otvori korpu">Korpa <span class="badge" id="cbadge">0</span></button>
 <button class="menu-btn" aria-label="Meni" aria-expanded="false">&#9776;</button>
 </div></header>
 
@@ -108,8 +151,8 @@ footer small{display:block;opacity:.6;margin-top:22px;max-width:60em}
 
 <section class="block" id="kolekcija"><div class="wrap">
 <p class="eyebrow">Kolekcija</p><h2>Haljine za devojčice</h2>
-<p class="sub">Model po model, kako ih brend objavljuje. Cene se dogovaraju u poruci &mdash; brend ih nije objavio.</p>
-<div class="grid"><a class="card" href="somot-haljina.html"><div class="im"><img src="img/somot-bordo.jpg" alt="Somot haljina sa mašnom" loading="lazy"><span class="tag">Jesen/zima</span></div><div class="tx"><h3>Somot haljina sa mašnom</h3><p class="meta">Bordo i bor zelena &middot; 3&ndash;12 god.</p><div class="dots"><i style="background:#6d1a22"></i><i style="background:#20362b"></i></div><p class="pr">Cena na upit</p></div></a><a class="card" href="https://ig.me/m/deca_brand"><div class="im"><img src="img/vuna-plava.jpg" alt="Vunena haljina, dva dezena" loading="lazy"><span class="tag">Jesen/zima</span></div><div class="tx"><h3>Vunena haljina, dva dezena</h3><p class="meta">100% vuna &middot; 3&ndash;12 god.</p><div class="dots"><i style="background:#b3502a"></i><i style="background:#8fbfd8"></i></div><p class="pr">Cena na upit</p></div></a><a class="card" href="https://ig.me/m/deca_brand"><div class="im"><img src="img/teget.jpg" alt="Teget haljina u vuni" loading="lazy"><span class="tag">Jesen/zima</span></div><div class="tx"><h3>Teget haljina u vuni</h3><p class="meta">Vuna &middot; 3&ndash;12 god.</p><div class="dots"><i style="background:#1d2a4a"></i></div><p class="pr">Cena na upit</p></div></a><a class="card" href="https://ig.me/m/deca_brand"><div class="im"><img src="img/hero.jpg" alt="Lanene letnje haljine" loading="lazy"><span class="tag">Leto 2026</span></div><div class="tx"><h3>Lanene letnje haljine</h3><p class="meta">Lan &middot; prozračan i hipoalergen</p><div class="dots"><i style="background:#e2b4a4"></i><i style="background:#a7cfc0"></i><i style="background:#e9dfc9"></i></div><p class="pr">Cena na upit</p></div></a><a class="card" href="https://ig.me/m/deca_brand"><div class="im"><img src="img/print-pink.jpg" alt="Letnje haljine sa štampom" loading="lazy"><span class="tag">Leto 2025</span></div><div class="tx"><h3>Letnje haljine sa štampom</h3><p class="meta">Prirodni materijali &middot; 3&ndash;10 god.</p><div class="dots"><i style="background:#e8aeb0"></i><i style="background:#f0e6f0"></i></div><p class="pr">Cena na upit</p></div></a></div></div></section>
+<p class="sub">Model po model, kako ih brend objavljuje. Izaberi boju i uzrast, dodaj u korpu i plati pouzećem.</p>
+<div class="grid"><article class="card" data-id="somot"><div class="im"><a class="imlink" href="somot-haljina.html"><img src="img/somot-bordo.jpg" alt="Somot haljina sa mašnom" loading="lazy"><span class="tag">Jesen/zima</span></a></div><div class="tx"><h3><a href="somot-haljina.html">Somot haljina sa mašnom</a></h3><p class="meta">Bordo i bor zelena · 3–12 god.</p><div class="dots"><i style="background:#6d1a22"></i><i style="background:#20362b"></i></div><p class="pr">6.900 RSD</p><div class="crow"><select class="sel" data-f="color" aria-label="Boja"><option>Bordo</option><option>Bor zelena</option></select><select class="sel" data-f="size" aria-label="Uzrast"><option value="">Uzrast...</option><option value="3">3 god.</option><option value="4">4 god.</option><option value="5">5 god.</option><option value="6">6 god.</option><option value="7">7 god.</option><option value="8">8 god.</option><option value="9">9 god.</option><option value="10">10 god.</option><option value="11">11 god.</option><option value="12">12 god.</option></select></div><p class="cerr"></p><button class="btn btn-dark add" type="button">Dodaj u korpu</button></div></article><article class="card" data-id="vuna"><div class="im"><img src="img/vuna-plava.jpg" alt="Vunena haljina, dva dezena" loading="lazy"><span class="tag">Jesen/zima</span></div><div class="tx"><h3>Vunena haljina, dva dezena</h3><p class="meta">100% vuna · 3–12 god.</p><div class="dots"><i style="background:#b3502a"></i><i style="background:#8fbfd8"></i></div><p class="pr">7.900 RSD</p><div class="crow"><select class="sel" data-f="color" aria-label="Boja"><option>Rđasta</option><option>Plava</option></select><select class="sel" data-f="size" aria-label="Uzrast"><option value="">Uzrast...</option><option value="3">3 god.</option><option value="4">4 god.</option><option value="5">5 god.</option><option value="6">6 god.</option><option value="7">7 god.</option><option value="8">8 god.</option><option value="9">9 god.</option><option value="10">10 god.</option><option value="11">11 god.</option><option value="12">12 god.</option></select></div><p class="cerr"></p><button class="btn btn-dark add" type="button">Dodaj u korpu</button></div></article><article class="card" data-id="teget"><div class="im"><img src="img/teget.jpg" alt="Teget haljina u vuni" loading="lazy"><span class="tag">Jesen/zima</span></div><div class="tx"><h3>Teget haljina u vuni</h3><p class="meta">Vuna · 3–12 god.</p><div class="dots"><i style="background:#1d2a4a"></i></div><p class="pr">7.500 RSD</p><div class="crow" style="grid-template-columns:1fr"><select class="sel" data-f="size" aria-label="Uzrast"><option value="">Uzrast...</option><option value="3">3 god.</option><option value="4">4 god.</option><option value="5">5 god.</option><option value="6">6 god.</option><option value="7">7 god.</option><option value="8">8 god.</option><option value="9">9 god.</option><option value="10">10 god.</option><option value="11">11 god.</option><option value="12">12 god.</option></select></div><p class="cerr"></p><button class="btn btn-dark add" type="button">Dodaj u korpu</button></div></article><article class="card" data-id="lan"><div class="im"><img src="img/hero.jpg" alt="Lanene letnje haljine" loading="lazy"><span class="tag">Leto 2026</span></div><div class="tx"><h3>Lanene letnje haljine</h3><p class="meta">Lan · prozračan i hipoalergen · 3–10 god.</p><div class="dots"><i style="background:#e2b4a4"></i><i style="background:#a7cfc0"></i><i style="background:#e9dfc9"></i></div><p class="pr">5.900 RSD</p><div class="crow"><select class="sel" data-f="color" aria-label="Boja"><option>Roze</option><option>Mint</option><option>Krem</option></select><select class="sel" data-f="size" aria-label="Uzrast"><option value="">Uzrast...</option><option value="3">3 god.</option><option value="4">4 god.</option><option value="5">5 god.</option><option value="6">6 god.</option><option value="7">7 god.</option><option value="8">8 god.</option><option value="9">9 god.</option><option value="10">10 god.</option></select></div><p class="cerr"></p><button class="btn btn-dark add" type="button">Dodaj u korpu</button></div></article><article class="card" data-id="stampa"><div class="im"><img src="img/print-pink.jpg" alt="Letnje haljine sa štampom" loading="lazy"><span class="tag">Leto 2025</span></div><div class="tx"><h3>Letnje haljine sa štampom</h3><p class="meta">Prirodni materijali · 3–10 god.</p><div class="dots"><i style="background:#e8aeb0"></i><i style="background:#f0e6f0"></i></div><p class="pr">4.900 RSD</p><div class="crow"><select class="sel" data-f="color" aria-label="Boja"><option>Roze motiv</option><option>Sitan cvetni motiv</option></select><select class="sel" data-f="size" aria-label="Uzrast"><option value="">Uzrast...</option><option value="3">3 god.</option><option value="4">4 god.</option><option value="5">5 god.</option><option value="6">6 god.</option><option value="7">7 god.</option><option value="8">8 god.</option><option value="9">9 god.</option><option value="10">10 god.</option></select></div><p class="cerr"></p><button class="btn btn-dark add" type="button">Dodaj u korpu</button></div></article></div></div></section>
 
 <section class="block mat" id="materijali"><div class="wrap">
 <p class="eyebrow">Materijali</p><h2>Ono što diše, greje i traje</h2>
@@ -138,23 +181,25 @@ footer small{display:block;opacity:.6;margin-top:22px;max-width:60em}
 <p class="eyebrow">Poručivanje</p><h2>Kako do haljine</h2>
 <div class="steps">
 <div class="step"><b>1</b><h3 style="font-size:24px;margin:8px 0">Izaberi model</h3><p>Pogledaj kolekciju i izaberi haljinu, boju i uzrast (3&ndash;10 ili 3&ndash;12 godina, zavisno od modela).</p></div>
-<div class="step"><b>2</b><h3 style="font-size:24px;margin:8px 0">Pošalji poruku</h3><p>Sve informacije &mdash; cena, veličina, rok &mdash; dobijaš direktno na Instagramu.</p></div>
-<div class="step"><b>3</b><h3 style="font-size:24px;margin:8px 0">Preorder</h3><p>Jesenje haljine su bile dostupne za preorder. Raspoloživost potvrđuje brend.</p></div>
+<div class="step"><b>2</b><h3 style="font-size:24px;margin:8px 0">Dodaj u korpu</h3><p>Izaberi boju i uzrast, dodaj haljinu u korpu i upiši podatke za dostavu.</p></div>
+<div class="step"><b>3</b><h3 style="font-size:24px;margin:8px 0">Plati pouzećem</h3><p>Plaćaš pri preuzimanju paketa. Jesenje haljine su prošle sezone bile na preorder; raspoloživost potvrđuje brend.</p></div>
 </div>
-<div class="cta-row" style="margin-top:28px"><a class="btn btn-dark" href="https://ig.me/m/deca_brand">Pošalji poruku na Instagramu</a></div>
+<div class="cta-row" style="margin-top:28px"><a class="btn btn-dark" href="#kolekcija">Izaberi haljinu</a></div>
 </div></section>
 
 <section class="block faq" style="padding-top:0"><div class="wrap" style="max-width:820px">
 <p class="eyebrow">Česta pitanja</p><h2>Pitanja</h2>
-<details><summary>Koje su veličine?</summary><p>Haljine su za devojčice od 3 do 10 godina, a jesenji modeli (somot, vuna) od 3 do 12 godina. Tabela mera nije objavljena &mdash; pitaj u poruci.</p></details>
-<details><summary>Koliko koštaju?</summary><p>Brend nije objavio cene. Pošalji poruku i dobićeš cenu za model i veličinu koju biraš.</p></details>
-<details><summary>Kako se peru?</summary><p>Uputstvo za održavanje nije objavljeno. Pitaj u poruci pre porudžbine.</p></details>
-<details><summary>Da li ima dostave?</summary><p>Uslovi dostave nisu objavljeni. Potvrđuje brend u poruci.</p></details>
+<details><summary>Koje su veličine?</summary><p>Haljine su za devojčice od 3 do 10 godina, a jesenji modeli (somot, vuna) od 3 do 12 godina. Tabela mera nije objavljena; pitanja o veličinama možeš poslati na Instagram @deca_brand.</p></details>
+<details><summary>Koliko koštaju?</summary><p>Cena je na kartici svakog modela, po komadu, u dinarima. Ista je za sve uzraste.</p></details>
+<details><summary>Kako se peru?</summary><p>Uputstvo za održavanje nije objavljeno. Pitanja o održavanju možeš poslati na Instagram @deca_brand.</p></details>
+<details><summary>Da li ima dostave?</summary><p>Šaljemo na adresu koju upišeš u porudžbini. Plaćanje je pouzećem, prilikom preuzimanja paketa.</p></details>
 </div></section>
+<div class="ov" id="ov"></div>
+<aside class="drawer" id="drawer" aria-hidden="true" role="dialog" aria-label="Korpa"><div class="dh"><h3 id="dt">Korpa</h3><button class="x" id="dx" type="button" aria-label="Zatvori">&times;</button></div><div class="db" id="db"></div><div class="df" id="df"></div></aside>
 <footer><div class="wrap">
 <div><div class="logo"><img src="img/logo.jpg" alt="" style="width:40px;height:40px;border-radius:50%"><span style="font-family:Caveat,cursive;font-size:32px;font-weight:700">deca</span></div><p style="margin-top:8px;opacity:.8">Brend odeće za decu</p></div>
-<div><b>Poručivanje</b><br><a href="https://www.instagram.com/deca_brand/">Instagram @deca_brand</a><br>Poruka na Instagramu</div>
-</div><div class="wrap"><small>Ovo je nezvanični mockup sajta napravljen na osnovu Instagram profila @deca_brand. Cene, dostava i raspoloživost nisu objavljeni i moraju se potvrditi sa brendom. Fotografije: @deca_brand.</small></div></footer>
+<div><b>Pitanja?</b><br>Pišite nam na Instagramu<br><a href="https://www.instagram.com/deca_brand/" target="_blank" rel="noopener">@deca_brand</a></div>
+</div><div class="wrap"><small>Ovo je nezvanični mockup sajta napravljen na osnovu Instagram profila @deca_brand. Cene na sajtu su okvirne (brend ih nije objavio), a dostava i raspoloživost moraju se potvrditi sa brendom. Fotografije: @deca_brand.</small></div></footer>
 <script>
 (function(){var h=document.querySelector('header.site'),b=h.querySelector('.menu-btn');
 var p=document.createElement('nav');p.className='mobile-nav';
@@ -162,5 +207,79 @@ h.querySelectorAll('nav.main a').forEach(function(a){p.appendChild(a.cloneNode(t
 b.addEventListener('click',function(){var o=h.classList.toggle('menu-open');b.setAttribute('aria-expanded',o)});
 p.addEventListener('click',function(e){if(e.target.closest('a'))h.classList.remove('menu-open')});})();
 
+
+var CATALOG={"somot": {"name": "Somot haljina sa mašnom", "price": 6900, "img": "somot-bordo.jpg", "colors": ["Bordo", "Bor zelena"]}, "vuna": {"name": "Vunena haljina, dva dezena", "price": 7900, "img": "vuna-plava.jpg", "colors": ["Rđasta", "Plava"]}, "teget": {"name": "Teget haljina u vuni", "price": 7500, "img": "teget.jpg", "colors": ["Teget"]}, "lan": {"name": "Lanene letnje haljine", "price": 5900, "img": "hero.jpg", "colors": ["Roze", "Mint", "Krem"]}, "stampa": {"name": "Letnje haljine sa štampom", "price": 4900, "img": "print-pink.jpg", "colors": ["Roze motiv", "Sitan cvetni motiv"]}};
+var cart=[],view='cart',ord=null,F={};
+try{cart=JSON.parse(localStorage.getItem('deca_cart')||'[]')}catch(e){cart=[]}
+if(!Array.isArray(cart))cart=[];
+cart=cart.filter(function(l){return l&&CATALOG[l.id]&&l.qty>0&&l.qty<100});
+function save(){try{localStorage.setItem('deca_cart',JSON.stringify(cart))}catch(e){}}
+function fmt(n){return String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')+' RSD'}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function total(){return cart.reduce(function(s,l){return s+CATALOG[l.id].price*l.qty},0)}
+function count(){return cart.reduce(function(s,l){return s+l.qty},0)}
+var $=function(i){return document.getElementById(i)};
+function badge(){$('cbadge').textContent=count();var b=$('cartbtn');b.classList.add('bump');setTimeout(function(){b.classList.remove('bump')},200)}
+function openD(){$('drawer').classList.add('on');$('ov').classList.add('on');$('drawer').setAttribute('aria-hidden','false');render()}
+function closeD(){$('drawer').classList.remove('on');$('ov').classList.remove('on');$('drawer').setAttribute('aria-hidden','true');if(view=='done'){view='cart'}}
+function addToCart(id,color,size,qty){
+  var k=cart.filter(function(l){return l.id==id&&l.color==color&&l.size==size})[0];
+  if(k)k.qty=Math.min(99,k.qty+qty);else cart.push({id:id,color:color,size:size,qty:qty});
+  save();view='cart';badge();openD();
+}
+function render(){
+  var db=$('db'),df=$('df'),t=$('dt'),h='';
+  var help='<p class="help">Pitanja? Pišite nam na Instagramu <a href="https://www.instagram.com/deca_brand/" target="_blank" rel="noopener">@deca_brand</a></p>';
+  if(view=='cart'){
+    t.textContent='Korpa';
+    if(!cart.length){db.innerHTML='<p class="empty">Korpa je prazna.</p>';df.innerHTML='<button class="btn btn-dark" type="button" data-act="close">Nastavi kupovinu</button>'+help;return}
+    cart.forEach(function(l,i){var p=CATALOG[l.id];
+      h+='<div class="ln"><img src="img/'+p.img+'" alt=""><div><b>'+esc(p.name)+'</b><small>'+esc(l.color)+' &middot; uzrast '+esc(l.size)+' god.</small><div class="qty"><button type="button" data-act="dec" data-i="'+i+'" aria-label="Manje">&minus;</button><span>'+l.qty+'</span><button type="button" data-act="inc" data-i="'+i+'" aria-label="Više">+</button></div></div><div class="pp">'+fmt(p.price*l.qty)+'<button class="rm" type="button" data-act="rm" data-i="'+i+'">Ukloni</button></div></div>';});
+    db.innerHTML=h;
+    df.innerHTML='<div class="tot"><span>Ukupno</span><span>'+fmt(total())+'</span></div><button class="btn btn-dark" type="button" data-act="checkout">Nastavi na plaćanje</button><p class="help" style="margin-top:10px">Plaćanje pouzećem prilikom preuzimanja.</p>'+help;
+  }else if(view=='form'){
+    t.textContent='Podaci za dostavu';
+    var v=function(n){return esc(F[n]||'')};
+    db.innerHTML='<form id="ck" novalidate><label class="fld">Ime i prezime<input name="ime" autocomplete="name" required value="'+v('ime')+'"></label><label class="fld">Adresa<input name="adresa" autocomplete="street-address" required value="'+v('adresa')+'"></label><div class="row2"><label class="fld">Grad<input name="grad" autocomplete="address-level2" required value="'+v('grad')+'"></label><label class="fld">Poštanski broj<input name="pb" inputmode="numeric" autocomplete="postal-code" value="'+v('pb')+'"></label></div><label class="fld">Telefon<input name="tel" type="tel" autocomplete="tel" required value="'+v('tel')+'"></label><label class="fld">E-mail<input name="mail" type="email" autocomplete="email" required value="'+v('mail')+'"></label><label class="fld">Napomena<textarea name="nap" rows="3" placeholder="Npr. visina deteta, poklon pakovanje...">'+v('nap')+'</textarea></label><div class="pay">Plaćanje pouzećem &mdash; plaćaš kuriru pri preuzimanju</div><p class="err" id="err"></p></form>';
+    df.innerHTML='<div class="tot"><span>Ukupno ('+count()+' kom)</span><span>'+fmt(total())+'</span></div><button class="btn btn-dark" type="button" data-act="submit">Poruči</button><button class="back" type="button" data-act="back">&larr; Nazad na korpu</button>'+help;
+  }else{
+    t.textContent='Porudžbina';
+    h='<div class="done"><div class="ok">&#10003;</div><h3>Hvala, porudžbina je primljena</h3><p>Broj porudžbine: <b>'+esc(ord.no)+'</b><br>Potvrdu šaljemo na '+esc(ord.mail)+'. Plaćanje pouzećem.</p><div class="sum">';
+    ord.lines.forEach(function(l){var p=CATALOG[l.id];h+='<div><span>'+l.qty+' &times; '+esc(p.name)+' ('+esc(l.color)+', '+esc(l.size)+' god.)</span><span>'+fmt(p.price*l.qty)+'</span></div>'});
+    h+='<div><span>Ukupno</span><span>'+fmt(ord.total)+'</span></div></div><p class="note" style="margin-top:14px">Dostava na: '+esc(ord.ime)+', '+esc(ord.adresa)+', '+esc(ord.grad)+'</p>'+(ord.nap?'<p class="note">Napomena: '+esc(ord.nap)+'</p>':'')+'</div>';
+    db.innerHTML=h;
+    df.innerHTML='<button class="btn btn-dark" type="button" data-act="close">Nastavi kupovinu</button>'+help;
+  }
+}
+$('drawer').addEventListener('click',function(e){
+  var b=e.target.closest('[data-act]');if(!b)return;var a=b.dataset.act,i=+b.dataset.i;
+  if(a=='close')closeD();
+  else if(a=='inc'){cart[i].qty=Math.min(99,cart[i].qty+1);save();badge();render()}
+  else if(a=='dec'){cart[i].qty--;if(cart[i].qty<1)cart.splice(i,1);save();badge();render()}
+  else if(a=='rm'){cart.splice(i,1);save();badge();render()}
+  else if(a=='checkout'){view='form';render()}
+  else if(a=='back'){readF();view='cart';render()}
+  else if(a=='submit'){submitOrder()}
+});
+function readF(){var f=$('ck');if(!f)return;['ime','adresa','grad','pb','tel','mail','nap'].forEach(function(n){F[n]=f.elements[n].value.trim()})}
+function submitOrder(){
+  readF();var er=$('err');
+  if(!F.ime||!F.adresa||!F.grad||!F.tel||!F.mail){er.textContent='Popuni ime, adresu, grad, telefon i e-mail.';return}
+  if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(F.mail)){er.textContent='E-mail adresa nije ispravna.';return}
+  if(F.tel.replace(/\D/g,'').length<7){er.textContent='Telefon nije ispravan.';return}
+  ord={no:'D-'+Date.now().toString(36).toUpperCase().slice(-6),lines:cart.slice(),total:total(),ime:F.ime,adresa:F.adresa,grad:F.grad,mail:F.mail,nap:F.nap};
+  cart=[];save();view='done';badge();render();
+}
+$('cartbtn').addEventListener('click',function(){view='cart';openD()});
+$('dx').addEventListener('click',closeD);$('ov').addEventListener('click',closeD);
+document.addEventListener('keydown',function(e){if(e.key=='Escape')closeD()});
+document.addEventListener('click',function(e){
+  var b=e.target.closest('.add');if(!b)return;var c=b.closest('[data-id]');
+  var id=c.dataset.id,p=CATALOG[id],cs=c.querySelector('[data-f=color]'),ss=c.querySelector('[data-f=size]');
+  var color=cs?cs.value:p.colors[0],size=ss?ss.value:'';var er=c.querySelector('.cerr');
+  if(!size){er.textContent='Izaberi uzrast.';return}er.textContent='';
+  addToCart(id,color,size,1);
+});
+badge();
 </script>
 </body></html>
